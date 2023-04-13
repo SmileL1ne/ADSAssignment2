@@ -25,4 +25,30 @@ public class MyArrayList<T> implements List<T> {
         }
         array = array2;
     }
+
+    public T get(int index) {
+        return (T) array[index];
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int find(T keyItem) {
+        for (int i = 0; i < size; i++) {
+            if (array[i] == keyItem) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public T remove(int index) {
+        T removed = (T) array[index];
+        for (int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        size--;
+        return removed;
+    }
 }
