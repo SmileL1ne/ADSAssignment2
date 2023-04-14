@@ -51,4 +51,16 @@ public class MyArrayList<T> implements List<T> {
         size--;
         return removed;
     }
+
+    public void reverse() {
+        int r = size - 1;
+        for (int i = 0; i < size; i++) {
+            Object temp;
+            temp = array[i];
+            array[i] = array[r];
+            array[r] = temp;
+            if (i == r || i > r) break;
+            r--;
+        }
+    }
 }

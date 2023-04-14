@@ -1,3 +1,5 @@
+package myarraylist;
+
 import myarraylist.MyArrayList;
 
 public class MyArrayListTest {
@@ -23,6 +25,13 @@ public class MyArrayListTest {
 
         System.out.println("Remove element with index 3: ");
         System.out.println(arrayList.remove(3));
+        for (int i = 0; i < arrayList.getSize(); i++) {
+            System.out.print(arrayList.get(i) + " ");
+        }
+
+        System.out.println();
+        System.out.println("Reversed arraylist: ");
+        arrayList.reverse();
         for (int i = 0; i < arrayList.getSize(); i++) {
             System.out.print(arrayList.get(i) + " ");
         }
