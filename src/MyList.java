@@ -1,6 +1,4 @@
-package myarraylist;
-
-public interface List<T> {
+public interface MyList<T> {
 
     void add(T newItem);
 
