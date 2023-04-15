@@ -32,36 +32,40 @@ public class MyListsTest {
 //            System.out.print(arrayList.get(i) + " ");
 //        }
 
-        // MyLinkedList TESTING
+        // MyDoublyLinkedList TESTING
 
-        MyLinkedList<Integer> linkedList = new MyLinkedList<>();
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-        linkedList.add(4);
-        linkedList.add(5);
-        linkedList.add(6);
-
-        System.out.println("Initial linked list: ");
-        for (int i = 0; i < linkedList.getSize(); i++) {
-            System.out.print(linkedList.get(i) + " ");
+        MyDoublyLinkedList<Integer> doublyLinkedList = new MyDoublyLinkedList<>();
+        doublyLinkedList.add(1);
+        doublyLinkedList.add(2);
+        doublyLinkedList.add(3);
+        doublyLinkedList.add(4);
+        doublyLinkedList.add(5);
+        System.out.println("Initial doubly linked list: ");
+        for (int i = 0; i < doublyLinkedList.getSize(); i++) {
+            System.out.print(doublyLinkedList.get(i) + " ");
         }
 
         System.out.println();
-        System.out.println("Find index of element '4': ");
-        System.out.println(linkedList.find(4));
-
-        System.out.println("Remove element with index '3': ");
-        System.out.println(linkedList.remove(3));
-        for (int i = 0; i < linkedList.getSize(); i++) {
-            System.out.print(linkedList.get(i) + " ");
+        System.out.println("Adding '8' to index 2: ");
+        doublyLinkedList.add(8, 2);
+        for (int i = 0; i < doublyLinkedList.getSize(); i++) {
+            System.out.print(doublyLinkedList.get(i) + " ");
         }
 
         System.out.println();
-        System.out.println("Reversed linked list: ");
-        linkedList.reverse();
-        for (int i = 0; i < linkedList.getSize(); i++) {
-            System.out.print(linkedList.get(i) + " ");
+        System.out.println("Item with index '5': ");
+        System.out.println(doublyLinkedList.find(5));
+
+        System.out.println("Removed item with index '2': ");
+        System.out.println(doublyLinkedList.remove(2));
+        for (int i = 0; i < doublyLinkedList.getSize(); i++) {
+            System.out.print(doublyLinkedList.get(i) + " ");
+        }
+        System.out.println();
+        System.out.println("Reversed doubly linked list: ");
+        doublyLinkedList.reverse();
+        for (int i = 0; i < doublyLinkedList.getSize(); i++) {
+            System.out.print(doublyLinkedList.get(i) + " ");
         }
     }
 }
