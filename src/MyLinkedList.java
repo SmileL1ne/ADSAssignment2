@@ -49,16 +49,41 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public int find(T keyItem) {
-        return 0;
+        MyNode<T> current = head;
+        for (int i = 0; i < size; i++) {
+            if (current.data == keyItem) {
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
     }
 
     @Override
     public T remove(int index) {
-        return null;
+        MyNode<T> current = head;
+        for (int i = 0; i < index-1; i++) {
+            current = current.next;
+        }
+        T removed = current.next.data;
+        current.next = current.next.next;
+        size--;
+        return removed;
     }
 
     @Override
     public void reverse() {
-
+        MyNode<T> prev = null;
+        MyNode<T> current = head;
+        MyNode<T> next;
+        while (current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        MyNode<T> temp = head;
+        head = tail;
+        tail = temp;
     }
 }

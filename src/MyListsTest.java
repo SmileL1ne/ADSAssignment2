@@ -46,5 +46,22 @@ public class MyListsTest {
         for (int i = 0; i < linkedList.getSize(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
+
+        System.out.println();
+        System.out.println("Find index of element '4': ");
+        System.out.println(linkedList.find(4));
+
+        System.out.println("Remove element with index '3': ");
+        System.out.println(linkedList.remove(3));
+        for (int i = 0; i < linkedList.getSize(); i++) {
+            System.out.print(linkedList.get(i) + " ");
+        }
+
+        System.out.println();
+        System.out.println("Reversed linked list: ");
+        linkedList.reverse();
+        for (int i = 0; i < linkedList.getSize(); i++) {
+            System.out.print(linkedList.get(i) + " ");
+        }
     }
 }
