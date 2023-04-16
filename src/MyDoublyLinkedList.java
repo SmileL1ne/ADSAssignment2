@@ -186,7 +186,7 @@ public class MyDoublyLinkedList<T> implements MyList<T> {
     public int lastIndexOf(T o) {
         MyNode<T> current = tail;
         int index = size - 1;
-        while (current != null) {
+        while (current.prev != null) {
             if (current.data == o) {
                 return index;
             }
@@ -198,7 +198,20 @@ public class MyDoublyLinkedList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-
+        MyNode<T> current = head;
+        MyNode<T> wholeList = head;
+        while(wholeList != null) {
+            while (current.next != null) {
+                if (((Comparable<T>) current.data).compareTo(current.next.data) > 0) {
+                    T temp = current.next.data;
+                    current.next.data = current.data;
+                    current.data = temp;
+                }
+                current = current.next;
+            }
+            current = head;
+            wholeList = wholeList.next;
+        }
     }
 
 }

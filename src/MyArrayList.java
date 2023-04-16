@@ -1,10 +1,10 @@
-public class MyArrayMyList<T> implements MyList<T> {
+public class MyArrayList<T> implements MyList<T> {
 
     private Object[] array;
     private int size = 0;
     private int capacity = 5;
 
-    public MyArrayMyList() {
+    public MyArrayList() {
         array = new Object[capacity];
     }
 
@@ -124,7 +124,15 @@ public class MyArrayMyList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (((Comparable<T>) array[j]).compareTo((T) array[j + 1]) > 0) {
+                    T temp = (T) array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
     }
 
 }

@@ -72,9 +72,11 @@ public class MyListsTest {
 //        System.out.println();
 //        System.out.println(arrayList.lastIndexOf(5));
 //
-//        MyArrayMyList<Integer> intArray = new MyArrayMyList<>();
+//        MyArrayList<Integer> intArray = new MyArrayList<>();
 //        intArray.add(8);
+//        intArray.add(9);
 //        intArray.add(4);
+//        intArray.add(1);
 //        intArray.add(2);
 //        intArray.add(15);
 //        System.out.println("New array: ");
@@ -90,16 +92,16 @@ public class MyListsTest {
 
         // MyDoublyLinkedList TESTING
 
-        MyList<Integer> myDoublyLinkedList = new MyDoublyLinkedList<>();
-        myDoublyLinkedList.add(1);
-        myDoublyLinkedList.add(2);
-        myDoublyLinkedList.add(3);
-        myDoublyLinkedList.add(4);
-        myDoublyLinkedList.add(5);
-        System.out.println("Initial doubly linked list: ");
-        for (int i = 0; i < myDoublyLinkedList.getSize(); i++) {
-            System.out.print(myDoublyLinkedList.get(i) + " ");
-        }
+//        MyList<Integer> myDoublyLinkedList = new MyDoublyLinkedList<>();
+//        myDoublyLinkedList.add(1);
+//        myDoublyLinkedList.add(2);
+//        myDoublyLinkedList.add(3);
+//        myDoublyLinkedList.add(4);
+//        myDoublyLinkedList.add(5);
+//        System.out.println("Initial doubly linked list: ");
+//        for (int i = 0; i < myDoublyLinkedList.getSize(); i++) {
+//            System.out.print(myDoublyLinkedList.get(i) + " ");
+//        }
 
 //        System.out.println();
 //        System.out.println("Adding '8' to index 2: ");
@@ -124,7 +126,7 @@ public class MyListsTest {
 //            System.out.print(myDoublyLinkedList.get(i) + " ");
 //        }
 
-        System.out.println();
+//        System.out.println();
 //        System.out.println("Contains '4': ");
 //        System.out.println(myDoublyLinkedList.contains(4));
 //        System.out.println("Contains '10': ");
@@ -143,12 +145,26 @@ public class MyListsTest {
 //            System.out.print(myDoublyLinkedList.get(i) + " ");
 //        }
 
-        System.out.println("Index of element '4': ");
-        System.out.println(myDoublyLinkedList.indexOf(4));
+//        System.out.println("Index of element '4': ");
+//        System.out.println(myDoublyLinkedList.indexOf(4));
+//
+//        System.out.println("Last index of element '4': ");
+//        System.out.println(myDoublyLinkedList.lastIndexOf(4));
 
-        System.out.println("Last index of element '4': ");
-        System.out.println(myDoublyLinkedList.lastIndexOf(4));
-
-
+//        MyDoublyLinkedList<Integer> intLinkedList = new MyDoublyLinkedList<>();
+//        intLinkedList.add(5);
+//        intLinkedList.add(14);
+//        intLinkedList.add(9);
+//        intLinkedList.add(6);
+//        System.out.println("New doubly linked list: ");
+//        for (int i = 0; i < intLinkedList.getSize(); i++) {
+//            System.out.print(intLinkedList.get(i) + " ");
+//        }
+//        System.out.println();
+//        System.out.println("Sorted doubly linked list: ");
+//        intLinkedList.sort();
+//        for (int i = 0; i < intLinkedList.getSize(); i++) {
+//            System.out.print(intLinkedList.get(i) + " ");
+//        }
     }
 }
