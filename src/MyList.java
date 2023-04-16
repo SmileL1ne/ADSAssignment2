@@ -1,4 +1,4 @@
-public interface MyList<T> {
+public interface MyList<T>{
 
     int getSize();
 
@@ -9,14 +9,13 @@ public interface MyList<T> {
     int find(T keyItem);
     void reverse();
 
-    //boolean contains(T o);
-    //void add(T newItem, int index);
-    //boolean remove(T item);
+    void add(T newItem, int index);
+        boolean contains(T o);
+    boolean remove(T item);
 
-    //void clear();
+    void clear();
 
-    //int indexOf(T o);
-    //int lastIndexOf(T o);
-    //void sort();
-
+    int indexOf(T o);
+    int lastIndexOf(T o);
+    void sort();
 }

@@ -1,5 +1,5 @@
 
-public class MyDoublyLinkedList<T> implements MyList<T>{
+public class MyDoublyLinkedList<T> implements MyList<T> {
 
     private MyNode<T> head;
     private MyNode<T> tail;
@@ -16,6 +16,7 @@ public class MyDoublyLinkedList<T> implements MyList<T>{
         E data;
         MyNode<E> next;
         MyNode<E> prev;
+
         MyNode(E data) {
             this.data = data;
         }
@@ -92,7 +93,7 @@ public class MyDoublyLinkedList<T> implements MyList<T>{
     public void reverse() {
         MyNode<T> current = head;
         MyNode<T> temp = null;
-        while (current != null){
+        while (current != null) {
             temp = current.prev;
             current.prev = current.next;
             current.next = temp;
@@ -103,7 +104,7 @@ public class MyDoublyLinkedList<T> implements MyList<T>{
         }
     }
 
-    //@Override
+    @Override
     public void add(T newItem, int index) {
         MyNode<T> current = head;
         MyNode<T> newNode = new MyNode<>(newItem);
@@ -115,7 +116,7 @@ public class MyDoublyLinkedList<T> implements MyList<T>{
             size++;
             return;
         }
-        int halfLen = size/2;
+        int halfLen = size / 2;
         if (index <= halfLen) {
             for (int i = 0; i < index - 1; i++) {
                 current = current.next;
@@ -133,4 +134,71 @@ public class MyDoublyLinkedList<T> implements MyList<T>{
         newNode.prev = current;
         size++;
     }
+
+    @Override
+    public boolean contains(T o) {
+        MyNode<T> current = head;
+        while (current != null) {
+            if (current.data == o) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean remove(T item) {
+        MyNode<T> current = head;
+        int index = 0;
+        while (current.next != null) {
+            if (current.data == item) {
+                remove(index);
+                return true;
+            }
+            current = current.next;
+            index++;
+        }
+        return false;
+    }
+
+    @Override
+    public void clear() {
+        head = tail = null;
+        size = 0;
+    }
+
+    @Override
+    public int indexOf(T o) {
+        MyNode<T> current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.data == o) {
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
+    }
+
+    @Override
+    public int lastIndexOf(T o) {
+        MyNode<T> current = tail;
+        int index = size - 1;
+        while (current != null) {
+            if (current.data == o) {
+                return index;
+            }
+            current = current.prev;
+            index--;
+        }
+        return -1;
+    }
+
+    @Override
+    public void sort() {
+
+    }
+
 }
